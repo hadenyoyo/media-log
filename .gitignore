@@ -12,7 +12,9 @@ dist
 dist-ssr
 *.local
 
+notes.md
 src/_boiler/
+api
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +26,5 @@ src/_boiler/
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
