@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #181A1B;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #21222A;
+    height: 90px;
+    padding: 15px 25px;
+}
+
+nav > h1 {
+    margin: 0;
+    padding-left: 10px;
+    margin-right: auto;
+    font-size: 2em;
+}
+
+nav > .about-button {
+    margin: 0;
+    align-items: left;
+    margin-right: 25px;
+}
+
+.review {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.review > h1 {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.review > h2 {
+    margin: 0;
+    margin-left: 10px;
+}
