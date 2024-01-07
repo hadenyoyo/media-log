@@ -1,5 +1,6 @@
 import reviewType from "../assets/film.svg";
 import { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
 
 
 export default function ReviewTemplate() {
@@ -18,15 +19,18 @@ export default function ReviewTemplate() {
 
     const content = data.rows[0];
     console.log(content);
+    const formattedTime = dayjs(content.time).format('dddd, MMMM D, YYYY');
 
     return (
-        <div className = "review">
+        <div>
             {data ? (
-                <div>
+                <div className = "review">
                     <h1>{content.name}</h1>
-                    <img className="material-symbols-outlined" src={reviewType} alt="Review Type" />
-                    <h2>{content.stars} Stars</h2>
-                    <h3>{content.time}</h3>
+                    <div className="review-header">
+                        <img src={reviewType} alt="Review Type" />
+                        <h2>{content.stars} Stars</h2>
+                    </div>
+                    <h3>{formattedTime}</h3>
                     <p>{content.content}</p>
                 </div>
             ) : (

@@ -29,17 +29,26 @@ nav > .about-button {
 .review {
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 20px;
 }
 
 .review > h1 {
-    margin: 0;
+    margin: 0 0 10px 0;
     width: 100%;
-    margin-bottom: 10px;
 }
 
-.review > h2 {
-    margin: 0;
-    margin-left: 10px;
+.review-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.review-header img {
+    margin-right: 10px;
+}
+
+.review-header h2, .review > h3, .review > p {
+    margin: 10px 0;
 }
