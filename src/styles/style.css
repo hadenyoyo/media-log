@@ -13,11 +13,17 @@ nav {
     padding: 15px 25px;
 }
 
-nav > h1 {
+nav > a {
+    text-decoration: none;
     margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: inherit;
+}
+
+nav > .logo {
     padding-left: 10px;
     margin-right: auto;
-    font-size: 2em;
 }
 
 nav > .about-button {
