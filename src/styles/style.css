@@ -58,3 +58,31 @@ nav > .about-button {
 .review-header h2, .review > h3, .review > p {
     margin: 10px 0;
 }
+
+.about-page {
+    margin-left: 25px;
+    width: 75%;
+}
+
+.about-page img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.about-page a {
+    color: #4078c0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 800px) {
+    .about-page {
+        width: 70%;
+    }
+}
+
+/* Media query for very large screens */
+@media (min-width: 1200px) {
+    .about-page {
+        width: 50%;
+    }
+}
