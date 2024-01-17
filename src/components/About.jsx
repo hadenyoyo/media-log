@@ -12,9 +12,9 @@ export default function About () {
                     After starting my 2024 media log in my ripped up and repurposed bullet journal I realized
                     I would have trouble organizing it on the fly. I could sense my future frustrations with 
                     regorganizing and inconsistent styling. After I sat down to continue my online React course
-                    I though, why not just make it a website? Here I can organize, and re-organize my thoughts
-                    easily now and in the future. Also with the added bonus of being able to easily link a page 
-                    to a friend or family member to share my thoughts.
+                    I thought, why not just make it a website? Here I can organize, and re-organize my thoughts
+                    easily now and in the future. Also it comes with the added bonus of being able to easily link 
+                    a page to a friend or family member to share my thoughts.
                 </p>
                 <h2>Academic Purpose</h2>
                 <p>

@@ -18,7 +18,6 @@ export default function ReviewTemplate() {
     }
 
     const content = data.rows[0];
-    console.log(content);
     const formattedTime = dayjs(content.time).format('dddd, MMMM D, YYYY');
 
     return (
