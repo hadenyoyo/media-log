@@ -1,9 +1,16 @@
-import reviewType from "../assets/film.svg";
-import Nav from "./Nav";
-
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
+
+import Nav from "./Nav";
+
+import filmIcon from "../assets/film.svg";
+import bookIcon from "../assets/book.svg";
+import gameIcon from "../assets/gamepad.svg";
+import boardIcon from "../assets/board.svg";
+import musicIcon from "../assets/music.svg";
+import defaultIcon from "../assets/default.svg";
+import starSVG from "../assets/star.svg";
 
 
 export default function ReviewTemplate() {
@@ -17,14 +24,20 @@ export default function ReviewTemplate() {
             .catch(error => console.error(error))
     }, [params.id]);
 
-    console.log('DEETA', data);
-
     if (!data) {
         return <p>Loading...</p>;
     }
 
     const content = data.rows[0];
     const formattedTime = dayjs(content.time).format('dddd, MMMM D, YYYY');
+
+    const typeIcons = {
+        Book: bookIcon,
+        Film: filmIcon,
+        Game: gameIcon,
+        Board: boardIcon,
+        Music: musicIcon
+    };
 
     return (
         <div>
@@ -33,8 +46,9 @@ export default function ReviewTemplate() {
                 <div className = "review">
                     <h1>{content.name}</h1>
                     <div className="review-header">
-                        <img src={reviewType} alt="Review Type" />
-                        <h2>{content.stars} Stars</h2>
+                        <img src={typeIcons[content.type] || defaultIcon} alt="Review Type" />
+                        <img className="star" src={starSVG} alt="Stars"/>
+                        <h2>{content.stars}</h2>
                     </div>
                     <h3>{formattedTime}</h3>
                     <p>{content.content}</p>
