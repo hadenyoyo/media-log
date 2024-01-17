@@ -32,6 +32,32 @@ nav > .about-button {
     margin-right: 25px;
 }
 
+.log-element {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #282933fa;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.log-element h1,
+.log-element p {
+    margin-left: 10px;
+}
+
+.log-element h2 {
+    margin-left: 0px;
+}
+
+.star {
+    width: 20px;
+    margin: 0;
+    margin-left: 10px;
+}
+
 .review {
     margin: 0;
     display: flex;

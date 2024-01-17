@@ -1,4 +1,5 @@
 import reviewType from "../assets/film.svg";
+import starSVG from "../assets/star.svg";
 import { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 
@@ -16,11 +17,12 @@ export default function Home() {
     }, []);
 
     const logElements = logs.map(log => (
-        <div key={log.id}>
+        <div className="log-element" key={log.id}>
             <img src={reviewType} /> {/* add type images here */}
             <h1>{log.name}</h1>
-            <p>{log.stars}</p>
-            <p>{dayjs(log.time).format('dddd, MMMM D, YYYY')}</p>
+            <img className="star" src={starSVG} />
+            <h2>{log.stars}</h2>
+            <p>{dayjs(log.time).format('MMMM D, YYYY')}</p>
         </div>
     ))
 
