@@ -1,6 +1,10 @@
 import reviewType from "../assets/film.svg";
 import starSVG from "../assets/star.svg";
+
+import Nav from "./Nav"
+
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import dayjs from 'dayjs';
 
 export default function Home() {
@@ -17,18 +21,25 @@ export default function Home() {
     }, []);
 
     const logElements = logs.map(log => (
-        <div className="log-element" key={log.id}>
-            <img src={reviewType} /> {/* add type images here */}
-            <h1>{log.name}</h1>
-            <img className="star" src={starSVG} />
-            <h2>{log.stars}</h2>
-            <p>{dayjs(log.time).format('MMMM D, YYYY')}</p>
+        <div key={log.id}>
+            <Link to={`/log/${log.id}`}>
+                <div className="log-element">
+                    <img src={reviewType} alt="Review Type"/> {/* add type images here */}
+                    <h1>{log.name}</h1>
+                    <img className="star" alt="Stars " src={starSVG} />
+                    <h2>{log.stars}</h2>
+                    <p>{dayjs(log.time).format('MMMM D, YYYY')}</p>
+                </div>
+            </Link>
         </div>
     ))
 
     return (
-        <div className="log-list">
-            {logElements}
+        <div>
+            <Nav />
+            <div className="log-list">
+                {logElements}
+            </div>
         </div>
     )
 }

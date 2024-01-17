@@ -52,10 +52,19 @@ nav > .about-button {
     margin-left: 0px;
 }
 
+.log-element:hover {
+    background-color: #333441fa;
+}
+
 .star {
     width: 20px;
     margin: 0;
     margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .review {
