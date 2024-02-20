@@ -131,3 +131,31 @@ a {
         width: 50%;
     }
 }
+
+.auth {
+    margin-top: 20px;
+    background-color: rgba(32, 33, 41, 0.98);
+    padding: 15px 25px;
+    border-radius: 20px;
+}
+
+.auth .input-group {
+    margin-left: 10px;
+}
+
+.auth input[type="submit"] {
+    margin-top: 10px;
+}
+
+.admin-form {
+    margin-left: 10px;
+    background-color: #333441fa;
+    padding: 20px;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.admin-upper, .admin-content {
+    width: 100%;
+    margin-bottom: 10px;
+}
