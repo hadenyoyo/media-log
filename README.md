@@ -1,6 +1,6 @@
 # Haden's Media Log
 
-A simple personal media-log website, made using React and PostgreSQL hosted on Vercel.
+A simple personal media-log website, made using React and PostgreSQL.
 
 ## Functional Purpose
 
